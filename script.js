@@ -1,11 +1,11 @@
-//reuseable function for DOM
+/*reuseable function for DOM*/
 function getElement(id) {
   return document.getElementById(id);
 }
 function getInnerText(id) {
   return document.getElementById(id).innerText;
 }
-//-------------------------------------------------------------
+//------------------------------------------------------------------------
 
 document.querySelector(".cards").addEventListener("click", (e) => {
   const btn = e.target;
@@ -30,7 +30,7 @@ document.querySelector(".cards").addEventListener("click", (e) => {
   const callHistoryContainer = getElement("call-history-conatiner");
   const callHistory = document.createElement("div");
   callHistory.innerHTML = `
-            <div class="call-history bg-gray-200 p-4 rounded-lg flex items-center justify-between">
+            <div class="call-history bg-[#fafafa] p-4 rounded-lg flex items-center justify-between">
                 <div class="">
                     <h2 id="service-title" class="text-lg font-semibold text-black">${serviceTitle}</h2>
                     <h3 id="service-number" class="text-lg font-normal text-gray-500">${serviceNumber}</h3>
@@ -45,9 +45,18 @@ document.querySelector(".cards").addEventListener("click", (e) => {
       callHistoryContainer.append(callHistory);
     } else {
       alert(
-        `❌ Insufficient coin! Please try, when you have at least 20 coins.`
+        `❌ Insufficient coin❗ Please try, when you have at least 20 coins.`
       );
     }
+  }
+
+  /*copy button functionality*/
+  const copyNumber =
+    btn.parentNode.parentNode.children[2].children[0].textContent;
+  let copyCount = parseInt(getInnerText("copy-count"));
+  if (btn.className.includes("copy-service-number")) {
+    getElement("copy-count").innerText = copyCount + 1;
+    return navigator.clipboard.writeText(copyNumber);
   }
 });
 
