@@ -17,4 +17,34 @@ document.querySelector(".cards").addEventListener("click", (e) => {
     btn.classList.remove("heart");
     console.log(btn.classList);
   }
+
+  /*call button functionality*/
+
+  const serviceTitle =
+    btn.parentNode.parentNode.children[1].children[0].innerText;
+  const serviceNumber =
+    btn.parentNode.parentNode.children[2].children[0].innerText;
+
+  let coinCount = parseInt(getInnerText("coin-count"));
+
+  const callHistoryContainer = getElement("call-history-conatiner");
+  const callHistory = document.createElement("div");
+  callHistory.innerHTML = `
+            <div class="call-history bg-gray-200 p-4 rounded-lg flex items-center justify-between">
+                <div class="">
+                    <h2 id="service-title" class="text-lg font-semibold text-black">${serviceTitle}</h2>
+                    <h3 id="service-number" class="text-lg font-normal text-gray-500">${serviceNumber}</h3>
+                </div>
+                <h2 id="callig-time" class="text-lg font-normal text-black">${new Date().toLocaleTimeString()}</h2>
+            </div>
+    `;
+  if (btn.className.includes("calling-service-number")) {
+    if (coinCount >= 20) {
+      alert(`📞 Calling ${serviceTitle} ${serviceNumber}....`);
+      getElement("coin-count").innerHTML = coinCount - 20;
+      callHistoryContainer.append(callHistory);
+    } else {
+      alert(`❌ Insufficient coin! Please try, when you have at least 20 coins.`);
+    }
+  }
 });
