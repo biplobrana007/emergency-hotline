@@ -44,7 +44,15 @@ document.querySelector(".cards").addEventListener("click", (e) => {
       getElement("coin-count").innerHTML = coinCount - 20;
       callHistoryContainer.append(callHistory);
     } else {
-      alert(`❌ Insufficient coin! Please try, when you have at least 20 coins.`);
+      alert(
+        `❌ Insufficient coin! Please try, when you have at least 20 coins.`
+      );
     }
   }
+});
+
+/*clear button functionality*/
+getElement("clear-btn").addEventListener("click", () => {
+  const callHistoryContainer = getElement("call-history-conatiner");
+  callHistoryContainer.innerHTML = "";
 });
