@@ -22,9 +22,56 @@
     <!-- tailwind css cdn -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- fonts -->
-     <link rel="stylesheet" href="./fonts.css">
+    <link rel="stylesheet" href="./fonts.css" />
   </head>
   <body>
+    <!-- header section -->
+    <header>
+      <!-- header navigation bar -->
+      <nav
+        class="md:w-11/12 py-6 mx-auto flex flex-col gap-5 lg:flex-row justify-between items-center"
+      >
+        <div class="nav-left flex items-center gap-5">
+          <img src="./assets/logo.png" alt="main-logo" class="max-w-12" />
+          <h2 class="text-2xl font-bold text-[#006747] leading-6">
+            Emergency <br />
+            Service
+          </h2>
+        </div>
+        <div class="nav-right flex flex-col md:flex-row gap-10">
+          <div
+            class="text-[16px] font-bold flex items-center gap-2 py-3 px-9 rounded-[50px] bg-[#41ff6a18]"
+          >
+            <span id="heart-count">0</span
+            ><img src="./assets/heart.png" alt="heart" class="max-w-6" />
+          </div>
+          <div
+            class="text-[16px] font-bold flex items-center gap-2 py-3 px-9 rounded-[50px] bg-[#41FF6a18]"
+          >
+            <span class="coin-count">0</span
+            ><img src="./assets/coin.png" alt="" class="max-w-6" />
+          </div>
+          <div
+            class="text-[16px] font-bold text-white flex items-center gap-2 py-3 px-9 rounded-[50px] bg-[#00A63E]"
+          >
+            <span class="copy-count">0</span>Copy
+          </div>
+        </div>
+      </nav>
+      <!-- header banner -->
+      <div
+        class="bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-center flex flex-col items-center gap-5 py-5 px-3 md:px-0"
+      >
+        <img src="./assets/logo-dark.png" alt="logo" class="max-w-19" />
+        <h1 class="text-[2.5rem] font-bold text-white leading-13">
+          Emergency Service Directory
+        </h1>
+        <p class="text-xl font-semibold text-white">
+          Government Emergency Services at Your Fingertip – A Project by
+          Government of the People’s Republic of Bangladesh
+        </p>
+      </div>
+    </header>
     <script src="./script.js"></script>
   </body>
 </html>
