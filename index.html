@@ -42,13 +42,13 @@
           <div
             class="text-[16px] font-bold flex items-center gap-2 py-3 px-9 rounded-[50px] bg-[#41ff6a18]"
           >
-            <span id="heart-count">0</span
-            ><img src="./assets/heart.png" alt="heart" class="max-w-6" />
+            <span id="heart-count">0</span>
+            <img src="./assets/heart.png" alt="heart" class="max-w-6" />
           </div>
           <div
             class="text-[16px] font-bold flex items-center gap-2 py-3 px-9 rounded-[50px] bg-[#41FF6a18]"
           >
-            <span class="coin-count">0</span
+            <span id="coin-count">0</span
             ><img src="./assets/coin.png" alt="" class="max-w-6" />
           </div>
           <div
@@ -63,7 +63,7 @@
         class="bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-center flex flex-col items-center gap-5 py-5 px-3 lg:px-0"
       >
         <img src="./assets/logo-dark.png" alt="logo" class="max-w-19" />
-        <h1 class="text-[2.5rem] font-bold text-white leading-13">
+        <h1 id="my-id" class="text-[2.5rem] font-bold text-white leading-13">
           Emergency Service Directory
         </h1>
         <p class="text-xl font-semibold text-white">
@@ -361,9 +361,13 @@
             Clear
             </button>
           </div>
+          <div id="call-history-conatiner" class="flex flex-col gap-2 mt-5">
+            
+            
+          </div>
         </aside>
       </section>
-    </main>
+    </main>      
     <script src="./script.js"></script>
   </body>
 </html>
