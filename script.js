@@ -30,14 +30,14 @@ document.querySelector(".cards").addEventListener("click", (e) => {
   const callHistoryContainer = getElement("call-history-conatiner");
   const callHistory = document.createElement("div");
   callHistory.innerHTML = `
-            <div class="call-history bg-[#fafafa] p-4 rounded-lg flex items-center justify-between">
-                <div class="">
-                    <h2 id="service-title" class="text-lg font-semibold text-black">${serviceTitle}</h2>
-                    <h3 id="service-number" class="text-lg font-normal text-gray-500">${serviceNumber}</h3>
-                </div>
-                <h2 id="callig-time" class="text-lg font-normal text-black">${new Date().toLocaleTimeString()}</h2>
-            </div>
-    `;
+              <div class="call-history bg-[#fafafa] p-4 rounded-lg flex items-center justify-between">
+                  <div class="">
+                      <h2 id="service-title" class="text-lg font-semibold text-black">${serviceTitle}</h2>
+                      <h3 id="service-number" class="text-lg font-normal text-gray-500">${serviceNumber}</h3>
+                  </div>
+                  <h2 id="callig-time" class="text-lg font-normal text-black">${new Date().toLocaleTimeString()}</h2>
+              </div>
+      `;
   if (btn.className.includes("calling-service-number")) {
     if (coinCount >= 20) {
       alert(`📞 Calling ${serviceTitle} ${serviceNumber}....`);
